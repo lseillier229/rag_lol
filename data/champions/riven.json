@@ -1,0 +1,42 @@
+{
+  "name": "Riven",
+  "title": "Exilée brisée",
+  "region": "Noxus",
+  "roles": ["Combattant", "Assassin"],
+  "lanes": ["top"],
+  "tags": ["top", "fighter", "mobility", "combo", "noxus"],
+  "summary": "Riven est une combattante mobile de Noxus, jouée principalement top, basée sur des combos rapides et une grosse mobilité.",
+  "lore_short": "Ancienne soldate noxienne, Riven erre en exil après avoir renié les méthodes brutales de son empire.",
+  "abilities": [
+    {
+      "key": "P",
+      "name": "Lame runique",
+      "type": "passive",
+      "description": "Les compétences de Riven chargent son épée, renforçant ses prochaines attaques de base."
+    },
+    {
+      "key": "Q",
+      "name": "Ailes brisées",
+      "type": "basic",
+      "description": "Riven effectue une série de trois coups, se déplaçant légèrement à chaque fois."
+    },
+    {
+      "key": "W",
+      "name": "Bravoure",
+      "type": "basic",
+      "description": "Riven se protège avec un petit bouclier en dashant dans une direction."
+    },
+    {
+      "key": "E",
+      "name": "Coup de ki",
+      "type": "basic",
+      "description": "Riven frappe le sol, infligeant des dégâts et étourdissant les ennemis proches (remarque : noms exacts variables selon langue, mais mécanisme correct)."
+    },
+    {
+      "key": "R",
+      "name": "Lame de l'exilée",
+      "type": "ultimate",
+      "description": "Riven renforce son épée, gagnant de l'attaque et une portée augmentée, puis peut lancer une vague d'énergie en cône."
+    }
+  ]
+}

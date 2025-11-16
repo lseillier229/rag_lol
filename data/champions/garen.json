@@ -1,0 +1,42 @@
+{
+  "name": "Garen",
+  "title": "Force de Demacia",
+  "region": "Demacia",
+  "roles": ["Combattant", "Tank"],
+  "lanes": ["top"],
+  "tags": ["top", "fighter", "tank", "facile", "demacia"],
+  "summary": "Garen est un combattant tanky de Demacia, joué principalement top, qui mise sur sa tankiness et son exécution ultime pour finir les ennemis.",
+  "lore_short": "Garen est un guerrier noble de Demacia, membre du Détachement hardi, qui incarne les idéaux de son royaume et mène les troupes en première ligne.",
+  "abilities": [
+    {
+      "key": "P",
+      "name": "Persévérance",
+      "type": "passive",
+      "description": "Garen régénère une partie de ses PV lorsqu'il ne subit pas de dégâts pendant quelques instants."
+    },
+    {
+      "key": "Q",
+      "name": "Coup décisif",
+      "type": "basic",
+      "description": "Garen dissipe les ralentissements, gagne de la vitesse de déplacement et son prochain coup inflige des dégâts supplémentaires et réduit la cible au silence."
+    },
+    {
+      "key": "W",
+      "name": "Courage",
+      "type": "basic",
+      "description": "Garen gagne des résistances passives en tuant des unités et peut activer le sort pour obtenir un bouclier et de la ténacité pendant un court instant."
+    },
+    {
+      "key": "E",
+      "name": "Jugement",
+      "type": "basic",
+      "description": "Garen tourne sur lui-même, infligeant plusieurs coups en zone autour de lui, avec plus de dégâts sur la cible la plus marquée."
+    },
+    {
+      "key": "R",
+      "name": "Justice de Demacia",
+      "type": "ultimate",
+      "description": "Garen invoque la puissance de Demacia pour abattre une épée sur un champion ennemi, infligeant de lourds dégâts, renforcés contre les cibles déjà blessées."
+    }
+  ]
+}

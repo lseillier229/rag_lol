@@ -1,0 +1,17 @@
+{
+  "name": "Senna",
+  "title": "Rédemptrice",
+  "region": "Runeterra",
+  "roles": ["Support", "Tireur"],
+  "lanes": ["support", "bot"],
+  "tags": ["support", "adc", "poke", "heal"],
+  "summary": "Senna est un support ADC hybride, poke à longue portée et soins utilitaires.",
+  "lore_short": "Guerrière maudite, porteuse de l’âme de Thresh qu’elle combat.",
+  "abilities": [
+    { "key": "P", "name": "Absolution", "type": "passive", "description": "Collecte d'âmes donnant portée et dégâts." },
+    { "key": "Q", "name": "Assaut de pénitence", "type": "basic", "description": "Soins aux alliés et dégâts en ligne." },
+    { "key": "W", "name": "Dernières étreintes", "type": "basic", "description": "Immobilisation après délai." },
+    { "key": "E", "name": "Malédiction noire", "type": "basic", "description": "Camouflage partagé avec les alliés proches." },
+    { "key": "R", "name": "Ombre de l'aube", "type": "ultimate", "description": "Rayon global, bouclier alliés + dégâts ennemis." }
+  ]
+}

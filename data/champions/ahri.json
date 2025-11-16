@@ -1,0 +1,42 @@
+{
+  "name": "Ahri",
+  "title": "Renard à neuf queues",
+  "region": "Ionia",
+  "roles": ["Mage", "Assassin"],
+  "lanes": ["mid"],
+  "tags": ["mid", "mage", "assassin", "ionia", "mobile", "burst", "dash"],
+  "summary": "Ahri est un mage assassin originaire d'Ionia, jouée principalement mid, avec un ultime qui lui permet de dash plusieurs fois et de burst ses ennemis.",
+  "lore_short": "Ahri est une vastaya renard d'Ionia capable de manipuler les émotions et de dévorer l'essence de ses victimes, tiraillée entre sa nature prédatrice et l'empathie qu'elle ressent.",
+  "abilities": [
+    {
+      "key": "P",
+      "name": "Voleur d'essence",
+      "type": "passive",
+      "description": "Les sorts d'Ahri lui permettent de se soigner périodiquement lorsqu'elle touche plusieurs ennemis ou participe à un kill."
+    },
+    {
+      "key": "Q",
+      "name": "Orbe d'illusion",
+      "type": "basic",
+      "description": "Ahri lance un orbe qui part puis revient, infligeant des dégâts à l'aller et au retour. C'est son principal sort de poke et de waveclear."
+    },
+    {
+      "key": "W",
+      "name": "Flammes spirituelles",
+      "type": "basic",
+      "description": "Ahri invoque plusieurs flammes qui ciblent automatiquement les ennemis proches, en priorité les champions touchés ou charmés récemment."
+    },
+    {
+      "key": "E",
+      "name": "Charme",
+      "type": "basic",
+      "description": "Ahri lance un projectile qui charme le premier ennemi touché, le forçant à marcher vers elle et augmentant les dégâts qu'il subit de ses sorts."
+    },
+    {
+      "key": "R",
+      "name": "Assaut spirituel",
+      "type": "ultimate",
+      "description": "Ahri dash jusqu'à trois fois dans la direction choisie, infligeant des dégâts à proximité à chaque dash. Elle peut obtenir des dashs supplémentaires en participant à des éliminations."
+    }
+  ]
+}

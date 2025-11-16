@@ -1,0 +1,17 @@
+{
+  "name": "Graves",
+  "title": "Délinquant hors-la-loi",
+  "region": "Bilgewater",
+  "roles": ["Tireur", "Combattant"],
+  "lanes": ["jungle", "mid", "top"],
+  "tags": ["jungle", "fighter", "adc", "bilgewater"],
+  "summary": "Graves est un jungler tireur bruiser, jouable top/mid, avec des dashs et smokes utilitaires.",
+  "lore_short": "Hors-la-loi connu, rival constant de Twisted Fate.",
+  "abilities": [
+    { "key": "P", "name": "Nouvelle destinée", "type": "passive", "description": "Fusil à cartouches qui repousse les sbires et monstres." },
+    { "key": "Q", "name": "Fin du baroud", "type": "basic", "description": "Balle qui explose après court délai." },
+    { "key": "W", "name": "Dégagement de fumée", "type": "basic", "description": "Aveuglement dans une fumée épaisse." },
+    { "key": "E", "name": "Ruée impétueuse", "type": "basic", "description": "Dash + gain d’armure." },
+    { "key": "R", "name": "Dommages collatéraux", "type": "ultimate", "description": "Projectile explosif longue portée." }
+  ]
+}

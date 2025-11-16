@@ -1,0 +1,17 @@
+{
+  "name": "Malphite",
+  "title": "Éclat du Monolithe",
+  "region": "Ixtal",
+  "roles": ["Tank"],
+  "lanes": ["top"],
+  "tags": ["top", "tank", "engage", "ixtal"],
+  "summary": "Malphite est un tank de top lane spécialisé dans l'engage explosif et le contrôle de zone.",
+  "lore_short": "Être de pierre vivant, Malphite tente de restaurer l'ordre naturel à travers Runeterra.",
+  "abilities": [
+    { "key": "P", "name": "Bouclier de granit", "type": "passive", "description": "Malphite gagne un bouclier périodique." },
+    { "key": "Q", "name": "Éclat sismique", "type": "basic", "description": "Vol de vitesse de déplacement sur une cible." },
+    { "key": "W", "name": "Coup écrasant", "type": "basic", "description": "Renforce les attaques en zone autour de lui." },
+    { "key": "E", "name": "Fracassage au sol", "type": "basic", "description": "Onde de choc réduisant la vitesse d'attaque ennemie." },
+    { "key": "R", "name": "Force irrésistible", "type": "ultimate", "description": "Malphite dash dans une zone, projetant les ennemis en l'air." }
+  ]
+}

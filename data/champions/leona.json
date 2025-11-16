@@ -1,0 +1,42 @@
+{
+  "name": "Leona",
+  "title": "L’aube radieuse",
+  "region": "Targon",
+  "roles": ["Tank", "Support"],
+  "lanes": ["support"],
+  "tags": ["support", "tank", "engage", "cc", "targon"],
+  "summary": "Leona est un support tank de Targon, joué principalement botlane, qui excelle dans l'engage et le contrôle de foule pour protéger son équipe.",
+  "lore_short": "Leona est une guerrière bénie par le soleil de Targon, portant l'armure et le bouclier des Solari pour défendre les innocents.",
+  "abilities": [
+    {
+      "key": "P",
+      "name": "Illumination",
+      "type": "passive",
+      "description": "Les sorts de Leona marquent les ennemis. Les attaques alliées consomment la marque pour infliger des dégâts magiques supplémentaires."
+    },
+    {
+      "key": "Q",
+      "name": "Bouclier de l’aube",
+      "type": "basic",
+      "description": "Leona renforce sa prochaine attaque, infligeant des dégâts supplémentaires et étourdissant la cible."
+    },
+    {
+      "key": "W",
+      "name": "Éclipse",
+      "type": "basic",
+      "description": "Leona gagne de l'armure et de la résistance magique puis explose, infligeant des dégâts autour d'elle."
+    },
+    {
+      "key": "E",
+      "name": "Lame du zénith",
+      "type": "basic",
+      "description": "Leona projette une lame de lumière qui touche les ennemis en ligne. Elle dash ensuite vers le dernier ennemi touché."
+    },
+    {
+      "key": "R",
+      "name": "Explosion solaire",
+      "type": "ultimate",
+      "description": "Leona appelle un rayon de lumière dans une zone, étourdissant les ennemis au centre et ralentissant ceux sur les bords."
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "name": "Jhin",
+  "title": "Virtuose",
+  "region": "Ionia",
+  "roles": ["Tireur"],
+  "lanes": ["bot"],
+  "tags": ["adc", "ionia", "burst", "sniper"],
+  "summary": "Jhin est un ADC d'Ionia orienté sniper, basé sur le burst et la précision.",
+  "lore_short": "Jhin est un meurtrier artistique, transformant le meurtre en oeuvre d'art macabre.",
+  "abilities": [
+    { "key": "P", "name": "Murmure", "type": "passive", "description": "Quatre balles, la dernière est un coup critique garanti." },
+    { "key": "Q", "name": "Grenade dansante", "type": "basic", "description": "Rebondit sur les ennemis et inflige plus de dégâts à chaque kill." },
+    { "key": "W", "name": "Floraison mortelle", "type": "basic", "description": "Tire en ligne droite, root une cible révélée par Jhin ou ses alliés." },
+    { "key": "E", "name": "Lotus captif", "type": "basic", "description": "Mines au sol infligeant des dégâts et ralentissant." },
+    { "key": "R", "name": "Apothéose", "type": "ultimate", "description": "Jhin utilise un canon à très longue portée avec ralentissement et exécution sur la 4e balle." }
+  ]
+}

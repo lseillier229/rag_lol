@@ -1,0 +1,17 @@
+{
+  "name": "Jarvan IV",
+  "title": "Exemple de Demacia",
+  "region": "Demacia",
+  "roles": ["Combattant", "Tank"],
+  "lanes": ["jungle", "top"],
+  "tags": ["jungle", "engage", "demacia", "tank"],
+  "summary": "Jarvan IV est un jungler de Demacia spécialisé dans les engagements rapides et l'enfermement d'ennemis clés.",
+  "lore_short": "Prince héritier de Demacia, Jarvan conduit ses troupes au combat avec honneur et bravoure.",
+  "abilities": [
+    { "key": "P", "name": "Cadence martiale", "type": "passive", "description": "Inflige des dégâts bonus au premier coup contre une cible." },
+    { "key": "Q", "name": "Frappe du dragon", "type": "basic", "description": "Estoc en ligne réduisant l'armure des ennemis." },
+    { "key": "W", "name": "Égide dorée", "type": "basic", "description": "Bouclier + ralentissement autour de lui." },
+    { "key": "E", "name": "Étendard demacien", "type": "basic", "description": "Pose un drapeau servant de cible à un dash combiné avec son Q." },
+    { "key": "R", "name": "Cataclysme", "type": "ultimate", "description": "Jarvan enferme une cible dans une arène de terrain rocheux." }
+  ]
+}

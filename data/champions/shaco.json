@@ -1,0 +1,17 @@
+{
+  "name": "Shaco",
+  "title": "Bouffon démoniaque",
+  "region": "Runeterra",
+  "roles": ["Assassin"],
+  "lanes": ["jungle"],
+  "tags": ["jungle", "assassin", "stealth", "clone"],
+  "summary": "Shaco est un jungler assassin furtif, expert en pièges, illusions et outplays.",
+  "lore_short": "Bouffon meurtrier, incarnation d’un humour terrifiant.",
+  "abilities": [
+    { "key": "P", "name": "Surprise !", "type": "passive", "description": "Critiques renforcés par derrière." },
+    { "key": "Q", "name": "Tromperie", "type": "basic", "description": "Invisibilité et dash." },
+    { "key": "W", "name": "Boîte surprise", "type": "basic", "description": "Pose un piège qui effraie les ennemis." },
+    { "key": "E", "name": "Poignard", "type": "basic", "description": "Ralentissement et exécution à distance." },
+    { "key": "R", "name": "Hallucination", "type": "ultimate", "description": "Clone explosif de Shaco." }
+  ]
+}

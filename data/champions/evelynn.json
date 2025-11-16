@@ -1,0 +1,17 @@
+{
+  "name": "Evelynn",
+  "title": "Douleur caressante",
+  "region": "Îles obscures",
+  "roles": ["Assassin"],
+  "lanes": ["jungle"],
+  "tags": ["jungle", "assassin", "stealth", "iles obscures"],
+  "summary": "Evelynn est une jungler assassin furtive qui charme avant d’exécuter ses cibles.",
+  "lore_short": "Démon de désir et de torture rôdant dans l’ombre des mortels.",
+  "abilities": [
+    { "key": "P", "name": "Dissimulation démoniaque", "type": "passive", "description": "Invisibilité hors combat." },
+    { "key": "Q", "name": "Échardes de haine", "type": "basic", "description": "Compétence de burst spammable." },
+    { "key": "W", "name": "Séduction", "type": "basic", "description": "Charm fort après délai sur une cible marquée." },
+    { "key": "E", "name": "Frappe fouettée", "type": "basic", "description": "Exécution de mêlée." },
+    { "key": "R", "name": "Derniers râles", "type": "ultimate", "description": "Exécution en reculant hors de portée." }
+  ]
+}

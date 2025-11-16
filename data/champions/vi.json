@@ -1,0 +1,17 @@
+{
+  "name": "Vi",
+  "title": "Protectrice de Piltover",
+  "region": "Piltover",
+  "roles": ["Combattant", "Assassin"],
+  "lanes": ["jungle"],
+  "tags": ["jungle", "fighter", "engage", "piltover", "dash"],
+  "summary": "Vi est une jungler de Piltover, bruiser très agressive, spécialisée en engage avec de puissants dashs et du contrôle.",
+  "lore_short": "Ancienne criminelle devenue héroïne, Vi utilise ses gants hextech pour faire régner l'ordre avec méthode... et de gros coups de poing.",
+  "abilities": [
+    { "key": "P", "name": "Protégeur du bouclier", "type": "passive", "description": "Génère régulièrement un bouclier en touchant des ennemis avec des compétences." },
+    { "key": "Q", "name": "Brise-coffres", "type": "basic", "description": "Vi charge puis dash en avant, infligeant des dégâts et projetant en arrière les ennemis touchés." },
+    { "key": "W", "name": "Percée", "type": "basic", "description": "Vi marque l'ennemi à chaque attaque et inflige des dégâts supplémentaires sur la troisième touche." },
+    { "key": "E", "name": "Coup excessif", "type": "basic", "description": "Les attaques de Vi sont renforcées et frappent derrière leur cible." },
+    { "key": "R", "name": "Assaut implacable", "type": "ultimate", "description": "Vi fonce sur une cible, la projette dans les airs et repousse les ennemis sur sa trajectoire." }
+  ]
+}

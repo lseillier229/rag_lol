@@ -1,0 +1,42 @@
+{
+  "name": "Lux",
+  "title": "Dame de lumière",
+  "region": "Demacia",
+  "roles": ["Mage", "Support"],
+  "lanes": ["mid", "support"],
+  "tags": ["mid", "support", "mage", "poke", "snare", "demacia"],
+  "summary": "Lux est un mage de Demacia, jouée mid ou support, spécialisée dans le poke à longue portée et le contrôle avec ses snares.",
+  "lore_short": "Lux est une jeune noble de Demacia qui maîtrise la lumière, tout en cachant sa magie dans un royaume qui redoute les mages.",
+  "abilities": [
+    {
+      "key": "P",
+      "name": "Illumination",
+      "type": "passive",
+      "description": "Les sorts de Lux marquent les ennemis et sa prochaine attaque ou compétence consomme la marque pour infliger des dégâts supplémentaires."
+    },
+    {
+      "key": "Q",
+      "name": "Entrave lumineuse",
+      "type": "basic",
+      "description": "Lux lance un projectile de lumière qui immobilise jusqu'à deux ennemis sur sa trajectoire."
+    },
+    {
+      "key": "W",
+      "name": "Barrière prismatique",
+      "type": "basic",
+      "description": "Lux lance sa baguette qui revient vers elle, accordant un bouclier aux alliés touchés à l'aller et au retour."
+    },
+    {
+      "key": "E",
+      "name": "Anomalie radieuse",
+      "type": "basic",
+      "description": "Lux crée une zone de lumière qui ralentit les ennemis et peut être réactivée pour exploser et infliger des dégâts."
+    },
+    {
+      "key": "R",
+      "name": "Éclat final",
+      "type": "ultimate",
+      "description": "Lux tire un rayon de lumière sur une longue ligne, infligeant de lourds dégâts magiques aux ennemis touchés."
+    }
+  ]
+}

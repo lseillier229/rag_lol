@@ -1,0 +1,17 @@
+{
+  "name": "Bard",
+  "title": "Gardien errant",
+  "region": "Runeterra",
+  "roles": ["Support"],
+  "lanes": ["support"],
+  "tags": ["support", "roam", "utilitaire"],
+  "summary": "Bard est un support roaming, expert en portails et contrôle temporel.",
+  "lore_short": "Être mystique de l’univers, protégeant l’équilibre cosmique.",
+  "abilities": [
+    { "key": "P", "name": "Appel du voyageur", "type": "passive", "description": "Ramasse des Meeps qui renforcent ses attaques." },
+    { "key": "Q", "name": "Lien cosmique", "type": "basic", "description": "Stun si deux cibles sont touchées en ligne." },
+    { "key": "W", "name": "Sanctuaire du gardien", "type": "basic", "description": "Soigne les alliés sur la durée." },
+    { "key": "E", "name": "Couloir magique", "type": "basic", "description": "Crée un tunnel traversable à travers un mur." },
+    { "key": "R", "name": "Destin tempéré", "type": "ultimate", "description": "Met ennemis et alliés en stase." }
+  ]
+}

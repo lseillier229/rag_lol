@@ -1,0 +1,17 @@
+{
+  "name": "Soraka",
+  "title": "Enfant des étoiles",
+  "region": "Targon",
+  "roles": ["Support"],
+  "lanes": ["support"],
+  "tags": ["support", "heal", "silence", "targon"],
+  "summary": "Soraka est un support basé sur le soin global et le silence, jouée botlane.",
+  "lore_short": "Créature céleste venue pour préserver la vie des mortels.",
+  "abilities": [
+    { "key": "P", "name": "Salut", "type": "passive", "description": "Accélération vers les alliés à faible PV." },
+    { "key": "Q", "name": "Appel de l'étoile", "type": "basic", "description": "Zone qui blesse les ennemis et soigne Soraka." },
+    { "key": "W", "name": "Infusion astrale", "type": "basic", "description": "Soigne un allié en sacrifiant ses propres PV." },
+    { "key": "E", "name": "Équinoxe", "type": "basic", "description": "Silence et root les ennemis au centre de la zone." },
+    { "key": "R", "name": "Souhait", "type": "ultimate", "description": "Soigne instantanément toute l’équipe, où qu’elle soit." }
+  ]
+}

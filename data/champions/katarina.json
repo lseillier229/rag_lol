@@ -1,0 +1,42 @@
+{
+  "name": "Katarina",
+  "title": "Lame sinistre",
+  "region": "Noxus",
+  "roles": ["Assassin", "Mage"],
+  "lanes": ["mid"],
+  "tags": ["mid", "assassin", "mage", "noxus", "reset", "aoe"],
+  "summary": "Katarina est une assassin mage de Noxus, jouée principalement mid, qui se spécialise dans les resets et les dégâts de zone en teamfight.",
+  "lore_short": "Fille du légendaire général Du Couteau, Katarina est une assassine noxienne qui privilégie l'efficacité et la loyauté envers Noxus au-dessus de tout.",
+  "abilities": [
+    {
+      "key": "P",
+      "name": "Voracité",
+      "type": "passive",
+      "description": "Les éliminations de champions et les assistances réduisent fortement les délais de récupération des compétences de Katarina."
+    },
+    {
+      "key": "Q",
+      "name": "Lame rebondissante",
+      "type": "basic",
+      "description": "Katarina lance une dague qui rebondit sur plusieurs ennemis et se plante au sol."
+    },
+    {
+      "key": "W",
+      "name": "Préparation",
+      "type": "basic",
+      "description": "Katarina obtient un bref bonus de vitesse de déplacement et lance une dague en l'air qui retombe à proximité."
+    },
+    {
+      "key": "E",
+      "name": "Shunpo",
+      "type": "basic",
+      "description": "Katarina dash instantanément vers une cible ou une dague, infligeant des dégâts à l'arrivée."
+    },
+    {
+      "key": "R",
+      "name": "Lotus mortel",
+      "type": "ultimate",
+      "description": "Katarina tourne sur elle-même en lançant des dagues, infligeant d'énormes dégâts en zone aux ennemis proches."
+    }
+  ]
+}

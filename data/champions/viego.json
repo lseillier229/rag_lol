@@ -1,0 +1,42 @@
+{
+  "name": "Viego",
+  "title": "Roi déchu",
+  "region": "Îles obscures",
+  "roles": ["Assassin", "Combattant"],
+  "lanes": ["jungle"],
+  "tags": ["jungle", "assassin", "fighter", "reset", "iles obscures"],
+  "summary": "Viego est un jungler assassin des Îles obscures, qui peut posséder les champions ennemis tués et enchaîner les resets en teamfight.",
+  "lore_short": "Viego est l'ancien roi d'un royaume perdu, devenu le Roi déchu après avoir provoqué la Ruine dans sa quête pour retrouver sa reine.",
+  "abilities": [
+    {
+      "key": "P",
+      "name": "Souverain en chute",
+      "type": "passive",
+      "description": "Viego peut posséder brièvement les champions ennemis qu'il aide à tuer, récupérant leur PV et leurs compétences non ultimes."
+    },
+    {
+      "key": "Q",
+      "name": "Lame du roi déchu",
+      "type": "basic",
+      "description": "Les attaques de Viego infligent des dégâts supplémentaires basés sur les PV manquants de la cible. L'activation frappe en ligne devant lui."
+    },
+    {
+      "key": "W",
+      "name": "Spectre harcelant",
+      "type": "basic",
+      "description": "Viego charge une ruée qui stun la première cible touchée, avec une portée et une durée d'étourdissement croissantes."
+    },
+    {
+      "key": "E",
+      "name": "Passage hanté",
+      "type": "basic",
+      "description": "Viego crée un voile de brume qui camoufle et accélère ses déplacements lorsqu'il se trouve à l'intérieur."
+    },
+    {
+      "key": "R",
+      "name": "Cœur brisé",
+      "type": "ultimate",
+      "description": "Viego se téléporte vers une zone autour d'un champion à faible PV, infligeant des dégâts en cône et exécutant les ennemis très affaiblis."
+    }
+  ]
+}

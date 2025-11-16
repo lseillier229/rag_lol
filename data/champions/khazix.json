@@ -1,0 +1,17 @@
+{
+  "name": "Kha'Zix",
+  "title": "Faucheur du Néant",
+  "region": "Néant",
+  "roles": ["Assassin"],
+  "lanes": ["jungle"],
+  "tags": ["jungle", "assassin", "void", "isolation"],
+  "summary": "Kha'Zix est un jungler assassin isolant ses cibles et évoluant en cours de partie.",
+  "lore_short": "Créature évolutive du Néant, chassant les plus forts pour se perfectionner.",
+  "abilities": [
+    { "key": "P", "name": "Menace invisible", "type": "passive", "description": "Camouflage en buisson + dégâts bonus sur cible isolée." },
+    { "key": "Q", "name": "Goût de la peur", "type": "basic", "description": "Gros dégâts sur cible solitaire." },
+    { "key": "W", "name": "Pique du Néant", "type": "basic", "description": "Projectiles ralentissant et soignant Kha’Zix s'il touche un champion." },
+    { "key": "E", "name": "Bond", "type": "basic", "description": "Saut qui explose à l'arrivée. Peut être évolué." },
+    { "key": "R", "name": "Attaque du Néant", "type": "ultimate", "description": "Camouflage + évolutions de compétences." }
+  ]
+}

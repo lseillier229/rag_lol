@@ -1,0 +1,17 @@
+{
+  "name": "Nautilus",
+  "title": "Titan des profondeurs",
+  "region": "Bilgewater",
+  "roles": ["Tank", "Support"],
+  "lanes": ["support"],
+  "tags": ["support", "tank", "engage", "cc", "bilgewater"],
+  "summary": "Nautilus est un support engage tanky, spécialiste des hooks et du contrôle de foule.",
+  "lore_short": "Ancien marin condamné à errer au fond de la mer dans une armure gigantesque.",
+  "abilities": [
+    { "key": "P", "name": "Enchaînement", "type": "passive", "description": "Root sur la première attaque contre un champion." },
+    { "key": "Q", "name": "Ancre de drague", "type": "basic", "description": "Hook qui attire Nautilus et sa cible l’un vers l’autre." },
+    { "key": "W", "name": "Colère du titan", "type": "basic", "description": "Bouclier + dégâts en zone sur attaques." },
+    { "key": "E", "name": "Raz-de-marée", "type": "basic", "description": "Onde en cônes ralentissant les ennemis." },
+    { "key": "R", "name": "Éruption", "type": "ultimate", "description": "Projecte un ennemi en l'air en traçant une onde inexorable." }
+  ]
+}

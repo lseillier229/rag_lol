@@ -1,0 +1,17 @@
+{
+  "name": "Blitzcrank",
+  "title": "Golem de vapeur",
+  "region": "Zaun",
+  "roles": ["Support"],
+  "lanes": ["support"],
+  "tags": ["support", "hook", "engage", "zaun"],
+  "summary": "Blitzcrank est un support engage de Zaun, spécialisé dans les grabs qui isolent une cible.",
+  "lore_short": "Ancien robot d’entretien, Blitzcrank s'est libéré pour aider les plus faibles.",
+  "abilities": [
+    { "key": "P", "name": "Barrière de mana", "type": "passive", "description": "Gagne un bouclier lorsqu'il est bas en PV." },
+    { "key": "Q", "name": "Poing d'acier", "type": "basic", "description": "Attrape une cible et l'attire vers lui." },
+    { "key": "W", "name": "Turbo", "type": "basic", "description": "Augmente fortement la vitesse de déplacement et d'attaque." },
+    { "key": "E", "name": "Poing d'acier", "type": "basic", "description": "Étourdissant le prochain coup." },
+    { "key": "R", "name": "Champ statique", "type": "ultimate", "description": "Silence en zone puis dégâts sur tous les ennemis proches." }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "name": "Nami",
+  "title": "Aquamancienne",
+  "region": "Bilgewater",
+  "roles": ["Support"],
+  "lanes": ["support"],
+  "tags": ["support", "heal", "buff", "engage", "bilgewater"],
+  "summary": "Nami est un support utilitaire, jouée botlane, qui soigne ses alliés, les renforce et engage avec des vagues et bulles.",
+  "lore_short": "Nami est une jeune marai déterminée, partie négocier avec la surface pour le bien de son peuple sous-marin.",
+  "abilities": [
+    {
+      "key": "P",
+      "name": "Bénédiction des marées",
+      "type": "passive",
+      "description": "Les sorts de Nami augmentent brièvement la vitesse de déplacement des alliés touchés."
+    },
+    {
+      "key": "Q",
+      "name": "Prison aqueuse",
+      "type": "basic",
+      "description": "Nami lance une bulle d'eau qui envoie les ennemis touchés en l'air et les étourdit."
+    },
+    {
+      "key": "W",
+      "name": "Flux et reflux",
+      "type": "basic",
+      "description": "Un sort rebondissant qui soigne les alliés et inflige des dégâts aux ennemis."
+    },
+    {
+      "key": "E",
+      "name": "Bénédiction de l'aquamancienne",
+      "type": "basic",
+      "description": "Nami confère des dégâts magiques supplémentaires et un ralentissement aux attaques d'un allié."
+    },
+    {
+      "key": "R",
+      "name": "Raz-de-marée",
+      "type": "ultimate",
+      "description": "Nami invoque une énorme vague qui se propage en ligne, renversant et ralentissant les ennemis touchés."
+    }
+  ]
+}

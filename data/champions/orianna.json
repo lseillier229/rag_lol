@@ -1,0 +1,42 @@
+{
+  "name": "Orianna",
+  "title": "Demoiselle mécanique",
+  "region": "Piltover",
+  "roles": ["Mage", "Contrôleur"],
+  "lanes": ["mid"],
+  "tags": ["mid", "mage", "control", "utility", "piltover"],
+  "summary": "Orianna est un mage control de Piltover, joué mid, qui manipule une balle mécanique pour poke, contrôler et protéger ses alliés.",
+  "lore_short": "Orianna est une jeune fille transformée en automate, accompagnée de sa balle mécanique, qui explore le monde au-delà de Piltover.",
+  "abilities": [
+    {
+      "key": "P",
+      "name": "Marionnettiste",
+      "type": "passive",
+      "description": "Les attaques d'Orianna infligent des dégâts supplémentaires basés sur ses dégâts magiques."
+    },
+    {
+      "key": "Q",
+      "name": "Commandement : Attaque",
+      "type": "basic",
+      "description": "Orianna ordonne à sa balle de se déplacer à un point, infligeant des dégâts aux ennemis traversés."
+    },
+    {
+      "key": "W",
+      "name": "Commandement : Dissonance",
+      "type": "basic",
+      "description": "La balle crée une onde de choc qui inflige des dégâts et modifie la vitesse de déplacement des ennemis et alliés."
+    },
+    {
+      "key": "E",
+      "name": "Commandement : Protection",
+      "type": "basic",
+      "description": "La balle se fixe sur un allié, lui accordant un bouclier et infligeant des dégâts sur son passage."
+    },
+    {
+      "key": "R",
+      "name": "Commandement : Onde de choc",
+      "type": "ultimate",
+      "description": "La balle attire brutalement les ennemis proches vers son centre et inflige de lourds dégâts."
+    }
+  ]
+}

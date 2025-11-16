@@ -1,0 +1,17 @@
+{
+  "name": "Kai'Sa",
+  "title": "Fille du Néant",
+  "region": "Néant",
+  "roles": ["Tireur", "Assassin"],
+  "lanes": ["bot"],
+  "tags": ["adc", "bot", "void", "mobility", "assassin"],
+  "summary": "Kai'Sa est un ADC du Néant, joué botlane, très mobile, capable de burst ses ennemis isolés.",
+  "lore_short": "Capturée enfant par le Néant, Kai'Sa a survécu et s'est adaptée, devenant une chasseuse redoutée.",
+  "abilities": [
+    { "key": "P", "name": "Seconde peau", "type": "passive", "description": "Ses attaques appliquent un passif qui explose après de nombreux coups." },
+    { "key": "Q", "name": "Pluie d'icathia", "type": "basic", "description": "Libère des missiles qui ciblent les ennemis proches." },
+    { "key": "W", "name": "Exploratrice du Néant", "type": "basic", "description": "Tire un rayon longue portée qui révèle et marque la cible." },
+    { "key": "E", "name": "Surpresseur", "type": "basic", "description": "Augmentation de la vitesse d'attaque et camouflage en courant." },
+    { "key": "R", "name": "Instinct meurtrier", "type": "ultimate", "description": "Dash vers une cible marquée pour burst ou repositionnement. " }
+  ]
+}

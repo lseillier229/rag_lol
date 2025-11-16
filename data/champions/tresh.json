@@ -1,0 +1,42 @@
+{
+  "name": "Thresh",
+  "title": "Garde aux chaînes",
+  "region": "Îles obscures",
+  "roles": ["Support", "Tank"],
+  "lanes": ["support"],
+  "tags": ["support", "tank", "engage", "hook", "pick", "cc", "iles obscures"],
+  "summary": "Thresh est un support tank des Îles obscures, joué principalement botlane, spécialisé dans les hooks, le contrôle de foule et les picks décisifs.",
+  "lore_short": "Thresh est un geôlier sadique des Îles obscures qui enferme les âmes dans sa lanterne pour les tourmenter éternellement.",
+  "abilities": [
+    {
+      "key": "P",
+      "name": "Damnation",
+      "type": "passive",
+      "description": "Thresh collecte les âmes des ennemis morts à proximité, ce qui augmente progressivement son armure et sa puissance."
+    },
+    {
+      "key": "Q",
+      "name": "Peine capitale",
+      "type": "basic",
+      "description": "Thresh lance sa faux, accrochant le premier ennemi touché, l'immobilisant et permettant à Thresh de se rapprocher de lui."
+    },
+    {
+      "key": "W",
+      "name": "Lien des ténèbres",
+      "type": "basic",
+      "description": "Thresh lance sa lanterne qui donne un bouclier aux alliés et leur permet de dash vers lui en cliquant dessus."
+    },
+    {
+      "key": "E",
+      "name": "Fauchage",
+      "type": "basic",
+      "description": "Thresh balaie sa chaîne, repoussant ou attirant les ennemis selon la direction, tout en les ralentissant."
+    },
+    {
+      "key": "R",
+      "name": "La cage",
+      "type": "ultimate",
+      "description": "Thresh crée une prison de murs spectraux autour de lui. Le premier mur traversé par un ennemi lui inflige de lourds dégâts et un fort ralentissement."
+    }
+  ]
+}

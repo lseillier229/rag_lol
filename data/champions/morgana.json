@@ -1,0 +1,42 @@
+{
+  "name": "Morgana",
+  "title": "Déchue",
+  "region": "Demacia",
+  "roles": ["Mage", "Support"],
+  "lanes": ["support", "mid"],
+  "tags": ["support", "mid", "mage", "snare", "black shield", "demacia"],
+  "summary": "Morgana est un mage support de Demacia, jouée support ou mid, connue pour son root longue durée et son bouclier anti-contrôles.",
+  "lore_short": "Morgana est une figure déchue qui rejette les lois sévères de Demacia et protège ceux qui souffrent de l'injustice.",
+  "abilities": [
+    {
+      "key": "P",
+      "name": "Siphon d'âme",
+      "type": "passive",
+      "description": "Morgana se soigne lorsqu'elle inflige des dégâts à des champions, sbires ou monstres."
+    },
+    {
+      "key": "Q",
+      "name": "Liens ténébreux",
+      "type": "basic",
+      "description": "Morgana lance un projectile qui immobilise l'ennemi touché pendant une longue durée."
+    },
+    {
+      "key": "W",
+      "name": "Sol profané",
+      "type": "basic",
+      "description": "Crée une zone au sol infligeant des dégâts sur la durée aux ennemis qui y restent."
+    },
+    {
+      "key": "E",
+      "name": "Bouclier noir",
+      "type": "basic",
+      "description": "Accorde un bouclier qui absorbe des dégâts magiques et empêche les contrôles tant qu'il tient."
+    },
+    {
+      "key": "R",
+      "name": "Chaînes spirituelles",
+      "type": "ultimate",
+      "description": "Morgana se lie aux champions ennemis proches, les ralentissant, puis les étourdissant après un délai s'ils restent à portée."
+    }
+  ]
+}

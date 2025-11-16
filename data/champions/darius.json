@@ -1,0 +1,42 @@
+{
+  "name": "Darius",
+  "title": "Main de Noxus",
+  "region": "Noxus",
+  "roles": ["Combattant", "Tank"],
+  "lanes": ["top"],
+  "tags": ["top", "fighter", "bruiser", "tank", "noxus", "execution"],
+  "summary": "Darius est un bruiser de Noxus, joué principalement top, qui applique des saignements et exécute les ennemis avec son ultime reset.",
+  "lore_short": "Darius est un général noxien impitoyable, symbole de la puissance militaire de Noxus, qui ne montre aucune pitié à ses ennemis.",
+  "abilities": [
+    {
+      "key": "P",
+      "name": "Hemorragie",
+      "type": "passive",
+      "description": "Les attaques et sorts de Darius appliquent un saignement qui inflige des dégâts physiques sur la durée et augmente ses dégâts."
+    },
+    {
+      "key": "Q",
+      "name": "Décimation",
+      "type": "basic",
+      "description": "Darius tourne avec sa hache. Le bord de la lame inflige plus de dégâts et soigne Darius s'il touche des champions."
+    },
+    {
+      "key": "W",
+      "name": "Estropieur",
+      "type": "basic",
+      "description": "Le prochain coup de Darius inflige des dégâts supplémentaires et ralentit la cible."
+    },
+    {
+      "key": "E",
+      "name": "Crampon",
+      "type": "basic",
+      "description": "Darius tire les ennemis vers lui avec le manche de sa hache, ce qui lui permet d'engager ou de punir les fuyards."
+    },
+    {
+      "key": "R",
+      "name": "Guillotine noxienne",
+      "type": "ultimate",
+      "description": "Darius saute sur un champion ennemi et le frappe avec une exécution. Si la cible meurt, le sort peut être relancé sur d'autres ennemis."
+    }
+  ]
+}

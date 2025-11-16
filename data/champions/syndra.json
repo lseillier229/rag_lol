@@ -1,0 +1,42 @@
+{
+  "name": "Syndra",
+  "title": "Souveraine obscure",
+  "region": "Ionia",
+  "roles": ["Mage"],
+  "lanes": ["mid"],
+  "tags": ["mid", "mage", "burst", "ionia", "control"],
+  "summary": "Syndra est un mage burst d'Ionia, joué au mid, qui manipule des sphères d'énergie pour zoner et exécuter ses cibles.",
+  "lore_short": "Syndra est une mage ionienne dont la puissance incontrôlée et le refus de toute restriction l'ont conduite sur une voie de domination.",
+  "abilities": [
+    {
+      "key": "P",
+      "name": "Transcendance",
+      "type": "passive",
+      "description": "Les sorts de Syndra deviennent plus puissants lorsqu'ils sont améliorés, renforçant leur effet."
+    },
+    {
+      "key": "Q",
+      "name": "Sphère noire",
+      "type": "basic",
+      "description": "Syndra crée une sphère d'énergie noire qui inflige des dégâts magiques à l'impact."
+    },
+    {
+      "key": "W",
+      "name": "Vol de pouvoir",
+      "type": "basic",
+      "description": "Syndra saisit une sphère ou un sbire, puis le lance pour infliger des dégâts et ralentir les ennemis."
+    },
+    {
+      "key": "E",
+      "name": "Dispersion des faibles",
+      "type": "basic",
+      "description": "Syndra repousse les ennemis et les sphères, étourdissant ceux qui sont touchés par une sphère repoussée."
+    },
+    {
+      "key": "R",
+      "name": "Pouvoir insoupçonné",
+      "type": "ultimate",
+      "description": "Syndra lance plusieurs sphères sur une cible unique, infligeant d'énormes dégâts en fonction du nombre de sphères."
+    }
+  ]
+}

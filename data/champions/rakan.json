@@ -1,0 +1,42 @@
+{
+  "name": "Rakan",
+  "title": "Charmeur rebelle",
+  "region": "Ionia",
+  "roles": ["Support"],
+  "lanes": ["support"],
+  "tags": ["support", "engage", "mobility", "charm", "ionia"],
+  "summary": "Rakan est un support engage d'Ionia, joué botlane, très mobile, capable de dash sur ses alliés et d'attirer plusieurs ennemis avec son charme.",
+  "lore_short": "Rakan est un vastaya charismatique et impulsif, compagnon de Xayah, qui se bat pour la liberté de son peuple.",
+  "abilities": [
+    {
+      "key": "P",
+      "name": "Plume de feu féerique",
+      "type": "passive",
+      "description": "Rakan gagne périodiquement un bouclier lorsqu'il se bat contre des champions ennemis."
+    },
+    {
+      "key": "Q",
+      "name": "Plume flamboyante",
+      "type": "basic",
+      "description": "Rakan lance une plume qui inflige des dégâts, et qui soigne les alliés proches s'il touche un champion ou un monstre."
+    },
+    {
+      "key": "W",
+      "name": "Entrée triomphale",
+      "type": "basic",
+      "description": "Rakan dash vers une zone et bondit, renversant et projetant en l'air les ennemis proches à l'atterrissage."
+    },
+    {
+      "key": "E",
+      "name": "Danse guerrière",
+      "type": "basic",
+      "description": "Rakan dash vers un allié allié, lui octroyant un bouclier. Peut être lancé deux fois."
+    },
+    {
+      "key": "R",
+      "name": "Valse enchanteresse",
+      "type": "ultimate",
+      "description": "Rakan gagne de la vitesse de déplacement et charme les ennemis qu'il touche, leur infligeant des dégâts et les regroupant."
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "name": "Lee Sin",
+  "title": "Moine aveugle",
+  "region": "Ionia",
+  "roles": ["Assassin", "Combattant"],
+  "lanes": ["jungle"],
+  "tags": ["jungle", "fighter", "assassin", "ionia", "dash", "mobility"],
+  "summary": "Lee Sin est un combattant d'Ionia, joué surtout en jungle, connu pour ses nombreux dashs et sa mobilité extrême.",
+  "lore_short": "Lee Sin est un moine ionien aveugle qui maîtrise l'énergie du ki et se bat pour protéger son peuple.",
+  "abilities": [
+    {
+      "key": "P",
+      "name": "Élan",
+      "type": "passive",
+      "description": "Après avoir lancé un sort, les deux prochaines attaques de Lee Sin gagnent de la vitesse d'attaque et rendent de l'énergie."
+    },
+    {
+      "key": "Q",
+      "name": "Onde sonore / Résonance",
+      "type": "basic",
+      "description": "Lee Sin lance une onde sonore qui révèle et marque un ennemi. Il peut ensuite dash vers la cible marquée avec Résonance."
+    },
+    {
+      "key": "W",
+      "name": "Sauvegarde / Volonté",
+      "type": "basic",
+      "description": "Lee Sin dash vers un allié ou un ward, lui conférant un bouclier, puis peut activer Volonté pour gagner du vol de vie et de la résistance."
+    },
+    {
+      "key": "E",
+      "name": "Tempête / Fracture",
+      "type": "basic",
+      "description": "Lee Sin émet une onde de choc en zone, révélant les ennemis, puis peut réactiver pour les ralentir."
+    },
+    {
+      "key": "R",
+      "name": "Rage du dragon",
+      "type": "ultimate",
+      "description": "Lee Sin donne un coup de pied circulaire à un ennemi, le projetant en arrière et renversant les ennemis sur sa trajectoire."
+    }
+  ]
+}

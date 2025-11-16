@@ -1,0 +1,42 @@
+{
+  "name": "Yasuo",
+  "title": "Le disgracié",
+  "region": "Ionia",
+  "roles": ["Combattant", "Assassin"],
+  "lanes": ["mid", "top"],
+  "tags": ["mid", "top", "fighter", "assassin", "crit", "dash", "ionia"],
+  "summary": "Yasuo est un combattant assassin d'Ionia, principalement joué mid ou top, qui utilise le vent et de nombreux dashs pour infliger de gros dégâts critiques.",
+  "lore_short": "Yasuo est un maître épéiste ionien accusé à tort d'avoir tué son maître, condamné à l'exil et hanté par sa quête de rédemption.",
+  "abilities": [
+    {
+      "key": "P",
+      "name": "Voie du vagabond",
+      "type": "passive",
+      "description": "Yasuo gagne un bouclier lorsqu'il se déplace et voit ses chances de coup critique augmentées."
+    },
+    {
+      "key": "Q",
+      "name": "Tempête d'acier",
+      "type": "basic",
+      "description": "Yasuo porte une estoc devant lui. Après deux lancers réussis, le troisième Q projette une tornade qui knock-up les ennemis."
+    },
+    {
+      "key": "W",
+      "name": "Mur de vent",
+      "type": "basic",
+      "description": "Yasuo crée un mur de vent qui bloque les projectiles ennemis pendant quelques secondes."
+    },
+    {
+      "key": "E",
+      "name": "Coup de vent",
+      "type": "basic",
+      "description": "Yasuo dash à travers les ennemis dans une direction, infligeant des dégâts magiques. Il peut enchaîner plusieurs dashs rapidement."
+    },
+    {
+      "key": "R",
+      "name": "Dernier soupir",
+      "type": "ultimate",
+      "description": "Yasuo se téléporte vers les ennemis projetés en l'air, les maintient en l'air et leur inflige de lourds dégâts physiques."
+    }
+  ]
+}

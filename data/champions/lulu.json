@@ -1,0 +1,17 @@
+{
+  "name": "Lulu",
+  "title": "Fée sorcière",
+  "region": "Bandle",
+  "roles": ["Support"],
+  "lanes": ["support"],
+  "tags": ["support", "enchanter", "shield", "polymorph", "bandle"],
+  "summary": "Lulu est un support enchanteur, joué botlane, spécialisé dans les boucliers, polymorphs et boosts d'alliés.",
+  "lore_short": "Lulu est une yordle détentrice d'une magie féerique imprévisible.",
+  "abilities": [
+    { "key": "P", "name": "Pix, compagnon féerique", "type": "passive", "description": "Pix assiste Lulu ou son allié en infligeant des dégâts magiques supplémentaires." },
+    { "key": "Q", "name": "Lance scintillante", "type": "basic", "description": "Deux projectiles en ligne qui ralentissent." },
+    { "key": "W", "name": "Métamorphose", "type": "basic", "description": "Transforme un ennemi en créature inoffensive ou accélère un allié." },
+    { "key": "E", "name": "Aide, Pix !", "type": "basic", "description": "Bouclier sur un allié ou dégâts sur un ennemi." },
+    { "key": "R", "name": "Croissance prodigieuse", "type": "ultimate", "description": "Grossit un allié, lui donne PV + knock-up autour de lui." }
+  ]
+}

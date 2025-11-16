@@ -1,0 +1,42 @@
+{
+  "name": "Jinx",
+  "title": "La Gâchette folle",
+  "region": "Zaun",
+  "roles": ["Tireur"],
+  "lanes": ["bot"],
+  "tags": ["adc", "bot", "zaun", "hypercarry", "reset"],
+  "summary": "Jinx est un tireur hypercarry de Zaun, joué botlane, qui snowball grâce à ses resets et ses dégâts monstrueux en late game.",
+  "lore_short": "Jinx est une criminelle chaotique de Zaun qui prend plaisir à semer le chaos et à faire exploser tout ce qu'elle voit.",
+  "abilities": [
+    {
+      "key": "P",
+      "name": "À fond les balles !",
+      "type": "passive",
+      "description": "Après avoir participé à une élimination d'ennemi, Jinx gagne une énorme vitesse de déplacement et d'attaque."
+    },
+    {
+      "key": "Q",
+      "name": "Choc et bang !",
+      "type": "basic",
+      "description": "Jinx alterne entre une mitraillette rapide à courte portée et un lance-roquettes à longue portée avec des dégâts de zone."
+    },
+    {
+      "key": "W",
+      "name": "Zap !",
+      "type": "basic",
+      "description": "Jinx tire un laser en ligne droite qui inflige des dégâts et ralentit le premier ennemi touché."
+    },
+    {
+      "key": "E",
+      "name": "Flammes mordantes",
+      "type": "basic",
+      "description": "Jinx lance des grenades qui explosent après un délai, infligeant des dégâts et rootant les ennemis pris dans l'explosion."
+    },
+    {
+      "key": "R",
+      "name": "Super roquette de la mort !",
+      "type": "ultimate",
+      "description": "Jinx tire une énorme roquette globale qui gagne des dégâts en fonction des PV manquants de la cible principale et inflige des dégâts en zone."
+    }
+  ]
+}

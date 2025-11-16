@@ -1,0 +1,17 @@
+{
+  "name": "Miss Fortune",
+  "title": "Chasseuse de primes",
+  "region": "Bilgewater",
+  "roles": ["Tireur"],
+  "lanes": ["bot"],
+  "tags": ["adc", "aoe", "bilgewater"],
+  "summary": "Miss Fortune est un ADC burst avec énormément de dégâts en zone grâce à son ultime.",
+  "lore_short": "Capitaine de Bilgewater cherchant à venger sa famille.",
+  "abilities": [
+    { "key": "P", "name": "Cœur à prendre", "type": "passive", "description": "Dégâts supplémentaires sur une cible non encore touchée." },
+    { "key": "Q", "name": "Double attaque", "type": "basic", "description": "Projectile qui rebondit en infligeant de lourds dégâts au kill." },
+    { "key": "W", "name": "Pluie de balles", "type": "basic", "description": "Ralentissement en zone." },
+    { "key": "E", "name": "Tir sinistre", "type": "basic", "description": "Gain de vitesse de déplacement." },
+    { "key": "R", "name": "Barrage de plomb", "type": "ultimate", "description": "Déluge de balles sur un large cône, énorme dégâts en teamfight." }
+  ]
+}

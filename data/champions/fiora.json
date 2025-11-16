@@ -1,0 +1,42 @@
+{
+  "name": "Fiora",
+  "title": "Grande duelliste",
+  "region": "Demacia",
+  "roles": ["Combattant", "Assassin"],
+  "lanes": ["top"],
+  "tags": ["top", "fighter", "duelist", "splitpush", "demacia"],
+  "summary": "Fiora est une duelliste de Demacia, jouée top, spécialisée dans les 1v1, l'esquive et le splitpush.",
+  "lore_short": "Fiora est la duelliste la plus redoutée de Demacia, obsédée par l'honneur de sa famille et la perfection martiale.",
+  "abilities": [
+    {
+      "key": "P",
+      "name": "Danse de la duelliste",
+      "type": "passive",
+      "description": "Fiora identifie des points vitaux sur les ennemis et inflige des dégâts supplémentaires lorsqu'elle les touche."
+    },
+    {
+      "key": "Q",
+      "name": "Estoc",
+      "type": "basic",
+      "description": "Fiora dash dans une direction et inflige un coup d'épée, priorisant les points vitaux."
+    },
+    {
+      "key": "W",
+      "name": "Riposte",
+      "type": "basic",
+      "description": "Fiora pare tous les dégâts et contrôles pendant un court instant, puis contre-attaque pour ralentir ou étourdir."
+    },
+    {
+      "key": "E",
+      "name": "Vélocité",
+      "type": "basic",
+      "description": "Fiora gagne de la vitesse d'attaque et son prochain coup ralentit, suivi d'un critique garanti."
+    },
+    {
+      "key": "R",
+      "name": "Défi suprême",
+      "type": "ultimate",
+      "description": "Fiora révèle quatre points vitaux autour d'un champion ennemi. Les toucher tous ou tuer la cible crée une zone qui soigne Fiora et ses alliés."
+    }
+  ]
+}

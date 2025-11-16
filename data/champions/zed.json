@@ -1,0 +1,42 @@
+{
+  "name": "Zed",
+  "title": "Maître des ombres",
+  "region": "Ionia",
+  "roles": ["Assassin"],
+  "lanes": ["mid"],
+  "tags": ["mid", "assassin", "ionia", "burst", "mobility"],
+  "summary": "Zed est un assassin d'Ionia, joué principalement mid, qui utilise des ombres et une grosse mobilité pour burst ses cibles.",
+  "lore_short": "Zed est le maître des ombres d'Ionia, ayant embrassé une magie interdite pour défendre son pays par tous les moyens.",
+  "abilities": [
+    {
+      "key": "P",
+      "name": "Mépris des faibles",
+      "type": "passive",
+      "description": "Les attaques de Zed infligent des dégâts supplémentaires aux ennemis ayant peu de PV."
+    },
+    {
+      "key": "Q",
+      "name": "Shuriken tranchant",
+      "type": "basic",
+      "description": "Zed et ses ombres lancent des shurikens qui infligent des dégâts au premier ennemi touché."
+    },
+    {
+      "key": "W",
+      "name": "Ombre vivante",
+      "type": "basic",
+      "description": "Zed projette une ombre qui copie ses sorts et peut échanger sa position avec elle, créant une forme de dash/téléportation."
+    },
+    {
+      "key": "E",
+      "name": "Taillade des ombres",
+      "type": "basic",
+      "description": "Zed et ses ombres tournent sur place en infligeant des dégâts en zone autour d'eux et en ralentissant les ennemis."
+    },
+    {
+      "key": "R",
+      "name": "Marque de la mort",
+      "type": "ultimate",
+      "description": "Zed dash derrière un champion ennemi, le marque et crée une ombre à sa position de départ. Après un délai, la marque explose et inflige des dégâts en fonction des dégâts infligés pendant la durée."
+    }
+  ]
+}

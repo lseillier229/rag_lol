@@ -1,0 +1,42 @@
+{
+  "name": "Ezreal",
+  "title": "Explorateur prodige",
+  "region": "Piltover",
+  "roles": ["Tireur"],
+  "lanes": ["bot", "mid"],
+  "tags": ["adc", "bot", "mid", "poke", "mobility", "piltover"],
+  "summary": "Ezreal est un tireur mobile de Piltover, joué surtout bot mais parfois mid, spécialisé dans le poke à longue portée et les skillshots.",
+  "lore_short": "Ezreal est un explorateur prodige de Piltover qui manipule un artefact ancien pour canaliser une puissante magie.",
+  "abilities": [
+    {
+      "key": "P",
+      "name": "Force grandissante",
+      "type": "passive",
+      "description": "Les sorts d'Ezreal qui touchent augmentent temporairement sa vitesse d'attaque."
+    },
+    {
+      "key": "Q",
+      "name": "Tir mystique",
+      "type": "basic",
+      "description": "Ezreal tire un projectiles à faible délai de récupération, infligeant des dégâts physiques et appliquant les effets à l'impact."
+    },
+    {
+      "key": "W",
+      "name": "Flux essentiel",
+      "type": "basic",
+      "description": "Ezreal lance un projectile qui se fixe sur la première cible touchée, amplifiant les dégâts du prochain sort ou attaque qui le déclenche."
+    },
+    {
+      "key": "E",
+      "name": "Transfert arcanique",
+      "type": "basic",
+      "description": "Ezreal se téléporte légèrement vers une direction et tire automatiquement un projectile sur l'ennemi le plus proche."
+    },
+    {
+      "key": "R",
+      "name": "Barrage térébrant",
+      "type": "ultimate",
+      "description": "Ezreal charge puis lance un projectile global traversant la carte, infligeant des dégâts aux ennemis sur sa trajectoire."
+    }
+  ]
+}

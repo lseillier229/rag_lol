@@ -1,0 +1,17 @@
+{
+  "name": "Akali",
+  "title": "Assassine rebelle",
+  "region": "Ionia",
+  "roles": ["Assassin"],
+  "lanes": ["mid", "top"],
+  "tags": ["assassin", "mid", "mobility", "ionia", "top"],
+  "summary": "Akali est une assassin très mobile d'Ionia, jouée principalement mid, spécialisée dans les éliminations rapides.",
+  "lore_short": "Formée par les Kinkou, Akali se bat seule pour défendre Ionia de l'ombre.",
+  "abilities": [
+    { "key": "P", "name": "Marque de l'assassin", "type": "passive", "description": "Inflige des dégâts supplémentaires après avoir touché avec un sort." },
+    { "key": "Q", "name": "Cinq pointes", "type": "basic", "description": "Lance des kunai en cône devant elle." },
+    { "key": "W", "name": "Linceul nébuleux", "type": "basic", "description": "Crée une zone de fumée où Akali devient inciblable visuellement." },
+    { "key": "E", "name": "Voltige du shuriken", "type": "basic", "description": "Shuriken qui marque une cible, puis dash sur elle en réactivation." },
+    { "key": "R", "name": "Exécution parfaite", "type": "ultimate", "description": "Double dash infligeant de lourds dégâts, le second étant une exécution." }
+  ]
+}

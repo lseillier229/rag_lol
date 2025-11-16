@@ -1,0 +1,17 @@
+{
+  "name": "Ashe",
+  "title": "Archère de givre",
+  "region": "Freljord",
+  "roles": ["Tireur"],
+  "lanes": ["bot"],
+  "tags": ["adc", "utility", "slow", "freljord"],
+  "summary": "Ashe est un ADC utilitaire du Freljord, spécialisée dans le kite, le ralentissement constant et un ultime global initiateur.",
+  "lore_short": "Ashe est l'unificatrice du Freljord, armée de son arc de glace ancestrale.",
+  "abilities": [
+    { "key": "P", "name": "Tir givrant", "type": "passive", "description": "Toutes les attaques ralentissent les cibles." },
+    { "key": "Q", "name": "Concentration du ranger", "type": "basic", "description": "Une rafale rapide de flèches après avoir attaqué plusieurs fois." },
+    { "key": "W", "name": "Salve", "type": "basic", "description": "Tire plusieurs flèches en cône." },
+    { "key": "E", "name": "Œil du faucon", "type": "basic", "description": "Révèle la carte en envoyant un faucon scout." },
+    { "key": "R", "name": "Flèche de cristal enchantée", "type": "ultimate", "description": "Une flèche globale qui étourdit le premier champion touché." }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "name": "Veigar",
+  "title": "Maître du mal",
+  "region": "Bandle",
+  "roles": ["Mage"],
+  "lanes": ["mid"],
+  "tags": ["mid", "mage", "burst", "cc", "scale"],
+  "summary": "Veigar est un mage burst qui scale à l'infini grâce à son passif, principalement joué mid.",
+  "lore_short": "Petite créature de Bandle, Veigar a embrassé le côté obscur... avec beaucoup d'ambition.",
+  "abilities": [
+    { "key": "P", "name": "Pouvoir maléfique phénoménal", "type": "passive", "description": "Gagne de la puissance en tuant des ennemis avec des sorts." },
+    { "key": "Q", "name": "Coup malin", "type": "basic", "description": "Projectile qui peut tuer deux ennemis et lui donne de la puissance." },
+    { "key": "W", "name": "Météore maléfique", "type": "basic", "description": "Inflige de gros dégâts après un délai." },
+    { "key": "E", "name": "Prison", "type": "basic", "description": "Mur qui étourdit tout ennemi qui le traverse." },
+    { "key": "R", "name": "Explosion primordiale", "type": "ultimate", "description": "Énorme exécution magique sur une cible unique." }
+  ]
+}

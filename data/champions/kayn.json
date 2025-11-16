@@ -1,0 +1,17 @@
+{
+  "name": "Kayn",
+  "title": "Faucheur de l'ombre",
+  "region": "Ionia",
+  "roles": ["Assassin", "Combattant"],
+  "lanes": ["jungle"],
+  "tags": ["jungle", "assassin", "fighter", "ionia", "dash", "shadow"],
+  "summary": "Kayn est un jungler assassin très mobile d'Ionia, pouvant se transformer en bruiser ou assassin pur selon la partie.",
+  "lore_short": "Kayn est un élève de Zed, maîtrisant une arme vivante du Néant qui tente de le dévorer.",
+  "abilities": [
+    { "key": "P", "name": "Faux du Darkin", "type": "passive", "description": "Choix de forme entre assassin (ombres) ou bruiser (Darkin)." },
+    { "key": "Q", "name": "Moisson cruelle", "type": "basic", "description": "Dash + dégâts de zone en deux temps." },
+    { "key": "W", "name": "Entailles des ombres", "type": "basic", "description": "Frappe à longue portée, en ligne droite." },
+    { "key": "E", "name": "Passage spectral", "type": "basic", "description": "Traverse les murs à grande vitesse." },
+    { "key": "R", "name": "Intrusion obscure", "type": "ultimate", "description": "Kayn s'infiltre dans un ennemi et en explose, infligeant de lourds dégâts." }
+  ]
+}
