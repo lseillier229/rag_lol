@@ -1,0 +1,14 @@
+# Core
+streamlit
+numpy
+
+# NLP / Embeddings
+torch
+transformers
+tokenizers   
+
+# Vector search
+faiss-cpu   
+
+# LLM Groq
+groq
