@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rag-storage-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: rag-storage
+  template:
+    metadata:
+      labels:
+        app: rag-storage
+    spec:
+      containers:
+        - name: dummy-storage
+          image: busybox
+          command: ["sleep", "3600"]

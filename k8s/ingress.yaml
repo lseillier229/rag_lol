@@ -1,0 +1,26 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: rag-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /$1
+spec:
+  ingressClassName: nginx
+  rules:
+    - http:
+        paths:
+          - path: /app/?(.*)
+            pathType: Prefix
+            backend:
+              service:
+                name: rag-frontend-service
+                port:
+                  number: 8501
+
+          - path: /monitoring/?(.*)
+            pathType: Prefix
+            backend:
+              service:
+                name: rag-monitoring-service
+                port:
+                  number: 9090

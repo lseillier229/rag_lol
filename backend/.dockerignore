@@ -1,0 +1,40 @@
+# Environnement virtuel (inutile pour Docker)
+.venv/
+venv/
+
+# Cache Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Dossier .git (inutile dans l'image)
+.git/
+.gitignore
+
+# Données locales
+*.db
+*.sqlite
+*.log
+*.csv
+*.tsv
+*.xlsx
+*.parquet
+*.zip
+
+# Dossier de données
+data/
+datasets/
+champions/
+
+# Modèles locaux (si tu les mets sur Hugging Face)
+rag_model/
+*.bin
+*.pt
+*.ckpt
+
+# Autres fichiers inutiles
+.DS_Store
+.idea/
+.vscode/
+*.ipynb_checkpoints/
+
