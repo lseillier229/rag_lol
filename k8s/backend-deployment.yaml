@@ -1,20 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: rag-backend-deployment
+  name: backend
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: rag-backend
+      app: backend
   template:
     metadata:
       labels:
-        app: rag-backend
+        app: backend
     spec:
       containers:
-        - name: rag-backend
-          image: rag-backend:latest
+        - name: backend
+          image: lseillier/rag-backend:latest:v5
           ports:
             - containerPort: 8000
-
+          env:
+            - name: STORAGE_BASE_URL
+              value: "http://rag-storage-service:9000/champions"

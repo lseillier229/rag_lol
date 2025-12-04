@@ -4,9 +4,9 @@ metadata:
   name: rag-backend-service
 spec:
   selector:
-    app: rag-backend
+    app: backend
   ports:
-    - protocol: TCP
-      port: 8000
-      targetPort: 8000
+    - name: http
+      port: 8000        # Port exposé dans le cluster
+      targetPort: 8000  # Port sur lequel ton container backend écoute
   type: ClusterIP

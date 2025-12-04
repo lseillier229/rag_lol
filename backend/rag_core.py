@@ -1,3 +1,5 @@
+import os
+import requests
 import json
 from pathlib import Path
 from typing import List, Dict, Any
@@ -12,8 +14,10 @@ import functools
 # ==============
 # CONFIG GLOBALE
 # ==============
+STORAGE_BASE_URL = os.getenv("STORAGE_BASE_URL")  
+BASE_DIR = Path(__file__).resolve().parent.parent
+DATA_DIR = BASE_DIR / "data" / "champions"  
 
-DATA_DIR = Path("data/champions")
 EMBED_MODEL_NAME = "camembert-base"
 MAX_LENGTH = 256
 TOP_K = 20
@@ -81,22 +85,69 @@ def build_text_from_champion(champ: Dict[str, Any]) -> str:
     return "\n".join(parts)
 
 
-def load_champion_docs() -> List[Dict[str, Any]]:
-    docs = []
-    for path in sorted(DATA_DIR.glob("*.json")):
-        with open(path, "r", encoding="utf-8") as f:
-            champ = json.load(f)
+def _get_champion_filenames_from_storage() -> List[str]:
+    """
+    Récupère la liste des fichiers JSON depuis le pod de storage
+    via un fichier index.json situé dans le dossier champions.
 
+    STORAGE_BASE_URL doit être du type :
+        http://rag-storage-service:9000/champions
+    et on lit :
+        {STORAGE_BASE_URL}/index.json
+    """
+    if not STORAGE_BASE_URL:
+        raise RuntimeError("STORAGE_BASE_URL n'est pas défini dans les variables d'environnement.")
+
+    base = STORAGE_BASE_URL.rstrip("/")
+    index_url = f"{base}/index.json"
+
+    resp = requests.get(index_url, timeout=10)
+    resp.raise_for_status()
+    filenames = resp.json()
+
+    if not isinstance(filenames, list) or not filenames:
+        raise RuntimeError(f"index.json mal formé ou vide à l'URL {index_url}")
+
+    return sorted(filenames)
+
+
+def _load_champion_from_storage(filename: str) -> Dict[str, Any]:
+    """
+    Charge un champion individuel depuis le pod de storage via HTTP.
+    """
+    base = STORAGE_BASE_URL.rstrip("/")
+    url = f"{base}/{filename}"
+    resp = requests.get(url, timeout=10)
+    resp.raise_for_status()
+    return resp.json()
+
+
+def load_champion_docs() -> List[Dict[str, Any]]:
+    """
+    Charge TOUS les champions UNIQUEMENT depuis le pod de storage (HTTP),
+    à partir de STORAGE_BASE_URL et d'un index.json.
+    Aucun accès disque local, conformément à la contrainte du projet.
+    """
+    filenames = _get_champion_filenames_from_storage()
+    docs: List[Dict[str, Any]] = []
+
+    for fname in filenames:
+        champ = _load_champion_from_storage(fname)
         text = build_text_from_champion(champ)
         docs.append(
             {
-                "id": path.stem,
-                "name": champ.get("name", path.stem),
+                "id": fname.rsplit(".", 1)[0],
+                "name": champ.get("name", fname),
                 "raw": champ,
                 "text": text,
             }
         )
+
+    if not docs:
+        raise RuntimeError("Aucun champion chargé depuis le pod de storage (liste vide).")
+
     return docs
+
 
 
 # ============================
@@ -136,7 +187,7 @@ def build_index():
     docs = load_champion_docs()
 
     if not docs:
-        raise RuntimeError(f"Aucun champion trouvé dans {DATA_DIR}")
+        raise RuntimeError("Aucun champion trouvé (storage + disque).")
 
     texts = [d["text"] for d in docs]
     embeddings = embed_texts(texts, tokenizer, model)
@@ -277,7 +328,12 @@ def answer_question(question: str, top_k: int = TOP_K) -> str:
     else:
         best = results[0]
         name = best["doc"]["name"]
-        debug = f"score={best['combined_score']:.2f}, overlap={best['lexical_overlap']}, meta={best['meta_overlap']}, score_FAISS={best['score']:.2f}"
+        debug = (
+            f"score={best['combined_score']:.2f}, "
+            f"overlap={best['lexical_overlap']}, "
+            f"meta={best['meta_overlap']}, "
+            f"score_FAISS={best['score']:.2f}"
+        )
         return (
             f"Le champion qui correspond le mieux à ta question est : **{name}**.\n\n"
             f"_Debug : {debug}_"

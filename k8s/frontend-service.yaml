@@ -4,9 +4,9 @@ metadata:
   name: rag-frontend-service
 spec:
   selector:
-    app: rag-frontend
+    app: frontend          # DOIT matcher le label du deployment frontend
   ports:
-    - protocol: TCP
-      port: 8501
-      targetPort: 8501
+    - name: http
+      port: 80             # port vu par nginx ingress
+      targetPort: 8501     # port du container streamlit
   type: ClusterIP

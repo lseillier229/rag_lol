@@ -3,24 +3,16 @@ kind: Ingress
 metadata:
   name: rag-ingress
   annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /$1
+    kubernetes.io/ingress.class: "nginx"
 spec:
-  ingressClassName: nginx
   rules:
-    - http:
+    - host: ""          # on accepte tout, tu testes à l'IP
+      http:
         paths:
-          - path: /app/?(.*)
+          - path: /
             pathType: Prefix
             backend:
               service:
                 name: rag-frontend-service
                 port:
-                  number: 8501
-
-          - path: /monitoring/?(.*)
-            pathType: Prefix
-            backend:
-              service:
-                name: rag-monitoring-service
-                port:
-                  number: 9090
+                  number: 80

@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: rag-frontend-deployment
+  name: frontend
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: rag-frontend
+      app: frontend
   template:
     metadata:
       labels:
-        app: rag-frontend
+        app: frontend
     spec:
       containers:
-        - name: rag-frontend
-          image: rag-frontend:latest
+        - name: frontend
+          image: lseillier/rag-frontend:latest:v4
           ports:
             - containerPort: 8501

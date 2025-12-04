@@ -13,6 +13,8 @@ spec:
         app: rag-storage
     spec:
       containers:
-        - name: dummy-storage
-          image: busybox
-          command: ["sleep", "3600"]
+      - name: rag-storage
+        image: lseillier/rag-storage:v2
+        ports:
+          - containerPort: 9000
+
