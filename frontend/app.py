@@ -1,5 +1,12 @@
 import streamlit as st
-from backend.rag_core import answer_question  # appel direct pour test local
+import os
+import sys
+
+ROOT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+if ROOT_DIR not in sys.path:
+    sys.path.insert(0, ROOT_DIR)
+
+from backend.rag_core import answer_question
 
 def init_session_state():
     if "messages" not in st.session_state:
