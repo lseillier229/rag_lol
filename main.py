@@ -8,19 +8,19 @@ import torch
 from transformers import CamembertModel, CamembertTokenizerFast
 import faiss
 import re
+import os
+from groq import Groq  # <-- NEW
 
 
-# ==============
-# CONFIG GLOBALE
-# ==============
-
-DATA_DIR = Path("data/champions")   # dossier où tu as mis les JSON
-EMBED_MODEL_NAME = "camembert-base"  # modèle pour les embeddings (retriever)
+DATA_DIR = Path("data/champions")
+EMBED_MODEL_NAME = "camembert-base"
 MAX_LENGTH = 256
-TOP_K = 20  # on récupère un peu plus large, puis on rerank
+TOP_K = 20
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-# petit set de stopwords FR pour le score lexical
+# Modèle Groq (change le nom si tu veux un autre modèle)
+GROQ_MODEL_NAME = "llama-3.1-8b-instant"
+
 STOPWORDS = {
     "le", "la", "les", "un", "une", "des", "de", "du", "d", "et", "en",
     "au", "aux", "pour", "avec", "que", "qui", "quel", "quelle",
@@ -42,24 +42,33 @@ def load_camembert():
     return tokenizer, model
 
 
+@st.cache_resource
+def get_groq_client():
+    """
+    Crée un client Groq une seule fois (cache Streamlit).
+    Nécessite GROQ_API_KEY dans les variables d'environnement.
+    """
+    if not api_key:
+        raise RuntimeError(
+            "GROQ_API_KEY n'est pas définie dans les variables d'environnement."
+        )
+    return Groq(api_key=api_key)
+
+
 # ============================
 # CHARGEMENT DES CHAMPIONS
 # ============================
 
 def build_text_from_champion(champ: Dict[str, Any]) -> str:
     """
-    Construit un texte descriptif optimisé pour le RAG :
-    on commence par un résumé très informatif (summary),
-    puis on ajoute les détails.
+    Construit un texte descriptif optimisé pour le RAG.
     """
     parts = []
 
-    # 1) Résumé très important
     summary = champ.get("summary")
     if summary:
         parts.append(summary)
 
-    # 2) Infos structurées
     name = champ["name"]
     title = champ.get("title", "")
     region = champ.get("region", "Inconnue")
@@ -77,7 +86,6 @@ def build_text_from_champion(champ: Dict[str, Any]) -> str:
     if tags:
         parts.append("Tags : " + ", ".join(tags))
 
-    # 3) Lore + spells (comme avant)
     if champ.get("lore_short"):
         parts.append("Description : " + champ["lore_short"])
 
@@ -90,7 +98,6 @@ def build_text_from_champion(champ: Dict[str, Any]) -> str:
             )
 
     return "\n".join(parts)
-
 
 
 def load_champion_docs() -> List[Dict[str, Any]]:
@@ -114,10 +121,6 @@ def load_champion_docs() -> List[Dict[str, Any]]:
         )
     return docs
 
-
-# ============================
-# EMBEDDINGS CAMEMBERT
-# ============================
 
 def embed_texts(
     texts: List[str],
@@ -147,10 +150,6 @@ def embed_texts(
         return cls_embeddings.cpu().numpy()
 
 
-# ============================
-# INDEX FAISS (RETRIEVAL)
-# ============================
-
 @st.cache_resource
 def build_index():
     """
@@ -166,7 +165,7 @@ def build_index():
     embeddings = embed_texts(texts, tokenizer, model)
 
     dim = embeddings.shape[1]
-    index = faiss.IndexFlatIP(dim)  # sur vecteurs normalisés => équivalent cosinus
+    index = faiss.IndexFlatIP(dim)
     index.add(embeddings)
 
     return {
@@ -186,7 +185,7 @@ def search_similar_docs(query: str, top_k: int = TOP_K):
     index = store["index"]
 
     query_emb = embed_texts([query], tokenizer, model)
-    k = min(top_k, len(docs))  # important
+    k = min(top_k, len(docs))
     scores, indices = index.search(query_emb, k)
 
     results = []
@@ -201,13 +200,7 @@ def search_similar_docs(query: str, top_k: int = TOP_K):
     return results
 
 
-
-# ============================
-# RERANK LEXICAL (style IR)
-# ============================
-
 def normalize_text(text: str) -> str:
-    # minuscule + suppression des accents (é -> e, î -> i, etc.)
     text = text.lower()
     text = unicodedata.normalize("NFD", text)
     text = "".join(ch for ch in text if unicodedata.category(ch) != "Mn")
@@ -216,12 +209,7 @@ def normalize_text(text: str) -> str:
 
 def simple_tokenize(text: str) -> List[str]:
     """
-    Tokenisation très simple :
-      - lowercase
-      - suppression des accents
-      - split sur tout ce qui n'est pas alphanumérique
-      - suppression des stopwords
-      - gestion basique du pluriel (tanks -> tank, supports -> support, etc.)
+    Tokenisation très simple.
     """
     text = normalize_text(text)
     tokens = re.split(r"[^a-z0-9]+", text)
@@ -234,23 +222,18 @@ def simple_tokenize(text: str) -> List[str]:
         if len(t) <= 1:
             continue
         cleaned.append(t)
-        # gestion très simple des pluriels en "s"
         if t.endswith("s") and len(t) > 2:
             cleaned.append(t[:-1])
     return cleaned
 
 
-
-def rerank_results(question: str, results: List[Dict[str, Any]], alpha=1.0, beta=0.3, gamma=0.8):
+def rerank_results(question: str, results: List[Dict[str, Any]],
+                   alpha=1.0, beta=0.3, gamma=0.8):
     """
     Combine :
       - score FAISS (dense)
       - overlap lexical sur tout le texte
       - overlap sur les métadonnées (roles, lanes, tags, region)
-
-    alpha : poids du score dense
-    beta  : poids de l'overlap lexical brut
-    gamma : poids de l'overlap sur les métadonnées
     """
     q_tokens = set(simple_tokenize(question))
 
@@ -259,19 +242,15 @@ def rerank_results(question: str, results: List[Dict[str, Any]], alpha=1.0, beta
         doc = r["doc"]
         doc_text = doc["text"]
 
-        # 1) Overlap lexical global
         doc_tokens = set(simple_tokenize(doc_text))
         lexical_overlap = len(q_tokens & doc_tokens)
 
-        # 2) Overlap sur les méta (roles, lanes, tags, region)
         meta_strings = []
 
-        # region
         region = doc.get("region")
         if region:
             meta_strings.append(region)
 
-        # roles, lanes, tags
         for field in ("roles", "lanes", "tags"):
             val = doc.get("raw", {}).get(field) or doc.get(field)
             if isinstance(val, str):
@@ -285,7 +264,6 @@ def rerank_results(question: str, results: List[Dict[str, Any]], alpha=1.0, beta
 
         meta_overlap = len(q_tokens & meta_tokens)
 
-        # 3) Score combiné
         combined = alpha * r["score"] + beta * lexical_overlap + gamma * meta_overlap
 
         reranked.append(
@@ -297,59 +275,115 @@ def rerank_results(question: str, results: List[Dict[str, Any]], alpha=1.0, beta
             }
         )
 
-    # tri décroissant sur le score combiné
     reranked.sort(key=lambda x: x["combined_score"], reverse=True)
     return reranked
 
 
+# ============================
+# LLM GROQ POUR LA RÉPONSE
+# ============================
 
-# ============================
-# RÉPONSE (RAG "classique")
-# ============================
+def generate_lol_answer_with_groq(question: str,
+                                  ranked_results: List[Dict[str, Any]],
+                                  max_docs: int = 5) -> str:
+    """
+    Utilise Groq pour générer une réponse finale à partir
+    de la question et des meilleurs documents RAG.
+    """
+    client = get_groq_client()
+
+    # On construit un contexte lisible à partir des top documents
+    context_chunks = []
+    for r in ranked_results[:max_docs]:
+        doc = r["doc"]
+        name = doc["name"]
+        text = doc["text"]
+        context_chunks.append(f"### Champion : {name}\n{text}")
+
+    context = "\n\n".join(context_chunks)
+
+    system_msg = (
+        "Tu es un expert de League of Legends. "
+        "Tu réponds en français, de façon claire et structurée. "
+        "Tu t'appuies uniquement sur le contexte fourni (champions et leurs descriptions). "
+        "Si tu n'as pas assez d'information, tu l'indiques honnêtement."
+    )
+
+    user_msg = f"""
+Question utilisateur :
+{question}
+
+Contexte (fiches de champions) :
+{context}
+
+Consignes :
+- Réponds directement à la question.
+- Cite les champions concernés.
+- Sois concis mais informatif.
+"""
+
+    response = client.chat.completions.create(
+        model=GROQ_MODEL_NAME,
+        messages=[
+            {"role": "system", "content": system_msg},
+            {"role": "user", "content": user_msg},
+        ],
+        temperature=0.2,
+        max_tokens=512,
+    )
+
+    return response.choices[0].message.content.strip()
+
 
 def answer_question(question: str, top_k: int = TOP_K) -> str:
     """
     Pipeline RAG :
       1) Retrieval dense (CamemBERT + FAISS)
-      2) Rerank lexical (overlap mots question/document)
-      3) On renvoie les champions les plus probables avec une phrase claire
+      2) Rerank lexical
+      3) Appel LLM Groq pour générer la réponse finale
+         + debug (scores, overlaps).
     """
-
     raw_results = search_similar_docs(question, top_k)
     if not raw_results:
         return "Je ne trouve rien dans ma base de connaissances LoL pour cette question 😅"
 
     results = rerank_results(question, raw_results)
 
-    # On décide : si l'utilisateur demande "plusieurs" ou "des champions", on en renvoie plusieurs
-    q_lower = question.lower()
-    wants_many = any(w in q_lower for w in ["plusieurs", "des champions", "quels", "quelles"])
+    # On garde le meilleur champion pour le debug
+    best = results[0]
+    best_name = best["doc"]["name"]
 
-    if wants_many:
-        # On renvoie par exemple les 3 premiers
-        top = results[:3]
-        names = [r["doc"]["name"] for r in top]
-        debug = ", ".join(
-            f"{r['doc']['name']} (score={r['combined_score']:.2f}, overlap={r['lexical_overlap']})"
-            for r in top
+    debug_lines = []
+    for r in results[:3]:
+        debug_lines.append(
+            f"{r['doc']['name']} "
+            f"(combined={r['combined_score']:.2f}, "
+            f"FAISS={r['score']:.2f}, "
+            f"lex={r['lexical_overlap']}, meta={r['meta_overlap']})"
         )
-        return (
-            f"Les champions qui correspondent le mieux à ta question sont : {', '.join(names)}.\n\n"
-            f"_Debug (pour le projet) : {debug}_"
+    debug_block = "\n".join(debug_lines)
+
+    try:
+        llm_answer = generate_lol_answer_with_groq(question, results)
+        final_answer = (
+            f"{llm_answer}\n\n"
+            f"---\n"
+            f"_Champion le plus probable selon le RAG : **{best_name}**_\n\n"
+            f"_Debug (pour le projet) :_\n{debug_block}"
         )
-    else:
-        # On renvoie le meilleur
-        best = results[0]
-        name = best["doc"]["name"]
-        debug = f"score={best['combined_score']:.2f}, overlap={best['lexical_overlap']}, meta={best['meta_overlap']}, score_FAISS={best['score']:.2f}"
-        return (
-            f"Le champion qui correspond le mieux à ta question est : **{name}**.\n\n"
-            f"_Debug (pour le projet) : {debug}_"
+    except Exception as e:
+        # Fallback si Groq plante
+        final_answer = (
+            f"Le champion qui correspond le mieux à ta question est : **{best_name}**.\n\n"
+            f"_Debug (Groq a échoué : {e})_\n"
+            f"_Scores :_\n{debug_block}"
         )
+
+    return final_answer
 
 
 # ============================
-# UI STREAMLIT (CHATBOT)
+# STREAMLIT APP
 # ============================
 
 def init_session_state():
@@ -358,37 +392,34 @@ def init_session_state():
 
 
 def main():
-    st.set_page_config(page_title="LoL RAG Chatbot", page_icon="🧠")
-    st.title("🧠💬 LoL RAG Chatbot (CamemBERT + FAISS + rerank lexical)")
+    st.set_page_config(page_title="LoL RAG Chatbot", page_icon="x")
+    st.title("LoL RAG Chatbot (CamemBERT + FAISS + Groq LLM)")
     st.caption(
         "Pose des questions sur les champions de League of Legends. "
-        "Le bot utilise un RAG : embeddings CamemBERT + FAISS, puis reranking lexical."
+        "Le bot utilise un RAG : embeddings CamemBERT + FAISS, reranking lexical, "
+        "puis un LLM Groq pour générer la réponse finale."
     )
 
     init_session_state()
 
-    # Afficher l'historique
     for msg in st.session_state.messages:
         with st.chat_message(msg["role"]):
             st.markdown(msg["content"])
 
-    # Champ de saisie
-    user_input = st.chat_input("Pose ta question (ex : Quel champion est un mage d'Ionia ?)")
+    user_input = st.chat_input(
+        "Pose ta question (ex : Quel champion est un mage d'Ionia ?)"
+    )
     if user_input:
-        # Ajout message user
         st.session_state.messages.append({"role": "user", "content": user_input})
 
-        # Affichage user
         with st.chat_message("user"):
             st.markdown(user_input)
 
-        # Réponse du bot
         with st.chat_message("assistant"):
             with st.spinner("Je fouille dans le Grimoire de Runeterra..."):
                 answer = answer_question(user_input)
                 st.markdown(answer)
 
-        # Ajout message assistant
         st.session_state.messages.append({"role": "assistant", "content": answer})
 
 

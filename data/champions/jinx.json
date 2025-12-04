@@ -6,7 +6,7 @@
   "lanes": ["bot"],
   "tags": ["adc", "bot", "zaun", "hypercarry", "reset"],
   "summary": "Jinx est un tireur hypercarry de Zaun, joué botlane, qui snowball grâce à ses resets et ses dégâts monstrueux en late game.",
-  "lore_short": "Jinx est une criminelle chaotique de Zaun qui prend plaisir à semer le chaos et à faire exploser tout ce qu'elle voit.",
+  "lore_short": "Jinx est une criminelle chaotique de Zaun qui prend plaisir à semer le chaos et à faire exploser tout ce qu'elle voit. C'est la soeur adoptive de Vi.",
   "abilities": [
     {
       "key": "P",
