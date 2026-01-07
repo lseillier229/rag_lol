@@ -1,0 +1,147 @@
+[
+  {
+    "question": "Quels champions viennent d'Ionia ?",
+    "type": "sql",
+    "expected_keywords": ["Ahri", "Yasuo", "Akali"]
+  },
+  {
+    "question": "Liste les mages",
+    "type": "sql",
+    "expected_keywords": ["Lux", "Syndra", "Ahri", "Veigar"]
+  },
+  {
+    "question": "Combien de champions jouent mid ?",
+    "type": "sql",
+    "expected_keywords": ["13"]
+  },
+  {
+    "question": "Quels ADC sont dans la base ?",
+    "type": "sql",
+    "expected_keywords": ["Jinx", "Kai'Sa", "Ezreal", "Jhin"]
+  },
+  {
+    "question": "Quels assassins jouent jungle ?",
+    "type": "sql",
+    "expected_keywords": ["Kha'Zix", "Viego", "Shaco", "Kayn", "Evelynn", "Lee Sin"]
+  },
+  {
+    "question": "Liste les supports",
+    "type": "sql",
+    "expected_keywords": ["Soraka", "Lulu", "Thresh", "Nami"]
+  },
+  {
+    "question": "Quels champions viennent de Noxus ?",
+    "type": "sql",
+    "expected_keywords": ["Darius", "Katarina"]
+  },
+  {
+    "question": "Quelles sont les compétences de Kai'Sa ?",
+    "type": "sql",
+    "expected_keywords": ["Seconde peau", "Pluie", "icathia", "Exploratrice", "Instinct"]
+  },
+  {
+    "question": "Décris le Q de Jinx",
+    "type": "sql",
+    "expected_keywords": ["mitraillette", "roquette"]
+  },
+  {
+    "question": "Quel est l'ultime d'Irelia ?",
+    "type": "sql",
+    "expected_keywords": ["Pointe", "avant-garde"]
+  },
+  {
+    "question": "Quels sont les pouvoirs de Kai'Sa ?",
+    "type": "sql",
+    "expected_keywords": ["Seconde peau", "Pluie", "Icathia", "Instinct"]
+  },
+  {
+    "question": "Quelles sont les capacités de Zed ?",
+    "type": "sql",
+    "expected_keywords": ["Marque", "mort", "ombre", "Lame"]
+  },
+  {
+    "question": "Quelles sont les compétences d'Akali ?",
+    "type": "sql",
+    "expected_keywords": ["Marque", "assassin", "Linceul", "Shuriken"]
+  },
+  {
+    "question": "Raconte l'histoire d'Akali",
+    "type": "rag",
+    "reference_answer": "Akali est une assassin d'Ionia qui a quitté l'ordre Kinkou pour combattre les ennemis de sa nation à sa manière."
+  },
+  {
+    "question": "Quel est le lore de Yasuo ?",
+    "type": "rag",
+    "reference_answer": "Yasuo est un épéiste d'Ionia qui maîtrise le vent. Accusé à tort du meurtre de son maître, il a dû fuir et tuer son propre frère."
+  },
+  {
+    "question": "Comment Kai'Sa a-t-elle survécu dans le Void ?",
+    "type": "rag",
+    "reference_answer": "Kai'Sa a survécu dans le Void grâce à un symbiote qui s'est attaché à elle, lui donnant une armure protectrice et des pouvoirs."
+  },
+  {
+    "question": "Quelle est l'histoire d'Ahri ?",
+    "type": "rag",
+    "reference_answer": "Ahri est une Vastaya aux traits de renard qui peut manipuler les émotions et consumer l'essence de ses proies."
+  },
+  {
+    "question": "Raconte le lore de Thresh",
+    "type": "rag",
+    "reference_answer": "Thresh est un spectre sadique des Îles Obscures qui capture et torture les âmes avec sa lanterne."
+  },
+  {
+    "question": "Qui est Zed ?",
+    "type": "rag",
+    "reference_answer": "Zed est le maître des ombres, un assassin d'Ionia qui a fondé l'Ordre des Ombres après avoir trahi l'ordre Kinkou."
+  },
+  {
+    "question": "Explique le background de Jinx",
+    "type": "rag",
+    "reference_answer": "Jinx est une criminelle chaotique de Zaun obsédée par les explosions et le chaos. Elle est la sœur de Vi."
+  },
+  {
+    "question": "Quel est le lien entre Jinx et Vi ?",
+    "type": "rag",
+    "reference_answer": "Jinx et Vi sont sœurs. Elles ont grandi ensemble à Zaun mais sont devenues ennemies."
+  },
+  {
+    "question": "Quel est le background de Lee Sin ?",
+    "type": "rag",
+    "reference_answer": "Lee Sin est un maître des arts martiaux d'Ionia, un moine-guerrier qui a perdu la vue mais protège sa terre natale."
+  },
+  {
+    "question": "Qui est le père de Kai'Sa ?",
+    "type": "rag",
+    "reference_answer": "Le père de Kai'Sa est Kassadin. Il a survécu au Void comme sa fille."
+  },
+  {
+    "question": "Comment Ahri utilise-t-elle ses pouvoirs ?",
+    "type": "rag",
+    "reference_answer": "Ahri utilise son charme pour manipuler les émotions de ses victimes et absorber leur essence vitale."
+  },
+  {
+    "question": "Comment Thresh capture-t-il les âmes ?",
+    "type": "rag",
+    "reference_answer": "Thresh capture les âmes avec sa lanterne. Il les emprisonne et les torture pour l'éternité."
+  },
+  {
+    "question": "Donne des conseils pour jouer Akali",
+    "type": "rag",
+    "reference_answer": "Pour jouer Akali, il faut maîtriser son linceul pour esquiver et utiliser ses dashes pour entrer et sortir des combats."
+  },
+  {
+    "question": "Quel est le passé de Riven ?",
+    "type": "rag",
+    "reference_answer": "Riven était une soldate de Noxus qui a perdu foi en son empire après avoir vu les horreurs de la guerre en Ionia. Elle vit maintenant en exil."
+  },
+  {
+    "question": "Comment jouer Kai'Sa ?",
+    "type": "rag",
+    "reference_answer": "Pour jouer Kai'Sa, il faut surprendre les carrys ennemis isolés et utiliser Pluie d'Icathia pour les éliminer."
+  },
+  {
+    "question": "Comment contrer Thresh ?",
+    "type": "rag",
+    "reference_answer": "Pour contrer Thresh, il faut esquiver sa compétence Peine capitale qui a un long délai d'incantation et le punir quand il tente de collecter les âmes."
+  }
+]
